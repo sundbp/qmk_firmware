@@ -80,7 +80,7 @@ $ ./utils/linux_install.sh
 $ ./keyboards/womier/k66/patch-chibios.sh
 ```
 
-4. Verify changes have been made on 2 and only 2 lines to the vectors.S file (via e.g. `git status` in the `lib/chibios` dir)
+4. Verify changes have been made on 2 and only 2 lines to the vectors.S file (via e.g. `git diff` in the `lib/chibios` dir)
 
 5. Run `make womier/k66:default`
 

@@ -31,31 +31,27 @@ OPT_DEFS = -Og
 # DFU_ARGS = -d 0483:df11 -a 0 -s 0x08000000:leave
 # DFU_SUFFIX_ARGS = -p DF11 -v 0483
 
-#RGB_MATRIX_ENABLE = IS31FL3731
-
 # Build Options
-#   comment out to disable the options.
-#
-# EXTRAFLAGS+=-flto
+
 LTO_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+NKRO_ENABLE = yes
+CUSTOM_MATRIX = yes
+RGB_MATRIX_ENABLE = custom
+
 BACKLIGHT_ENABLE = no
 MAGIC_ENABLE = no
 MAGIC_KEYCODE_ENABLE = no
-BOOTMAGIC_ENABLE = no  # Virtual DIP switch configuration
-## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
-MOUSEKEY_ENABLE = no # Mouse keys
-EXTRAKEY_ENABLE = yes # Audio control and System control
-CONSOLE_ENABLE = no  # Console for debug
-COMMAND_ENABLE = no    # Commands for debug and configuration
-SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = no     # USB Nkey Rollover
+BOOTMAGIC_ENABLE = no
+MOUSEKEY_ENABLE = no
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+SLEEP_LED_ENABLE = no
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 SERIAL_LINK_ENABLE = no
-CUSTOM_MATRIX = yes
-RGB_MATRIX_ENABLE = custom
-# CH_CFG_NO_IDLE_THREAD = yes
-# VIA_ENABLE = yes
+LEADER_ENABLE = no
+VIA_ENABLE = no
 
 EXTRALDFLAGS = --specs=nano.specs
 USE_PROCESS_STACKSIZE = 0x180
