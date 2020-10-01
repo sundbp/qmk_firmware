@@ -3,6 +3,7 @@
 K66
 
 Keyboard Maintainer: toast, xyz
+
 Hardware Supported: SN32F248BF
 
 # Womier K66 QMK
@@ -42,7 +43,7 @@ Steps to build the QMK firmware for your keyboard:
 
 2. Clone the QMK firmware to your msys user directory, usually c:\msys64\home\[user]\ using the following command:
 ```
-git clone -b womier-k66-rgb-support --recurse-submodules -j8 https://github.com/smp4488/qmk_firmware.git
+git clone -b womier-sundbp --recurse-submodules -j8 https://github.com/sundbp/qmk_firmware.git
 ```
 
 3. Search for the application "MSYS MinGW 64-bit" or "MSYS2 MSYS" and open it. Navigate to ~\qmk_firmware\util and run ./msys2_install.sh
@@ -69,16 +70,21 @@ Steps to build the QMK firmware for your keyboard:
 git clone -b womier-sundbp --recurse-submodules -j8 https://github.com/sundbp/qmk_firmware.git
 ```
 
-2. Add the 2-line patch needed for the chibios submodule:
+2. Install the required build tools:
+```
+$ ./utils/linux_install.sh
+```
+
+3. Add the 2-line patch needed for the chibios submodule:
 ```
 $ ./keyboards/womier/k66/patch-chibios.sh
 ```
 
-3. Verify changes have been made on 2 and only 2 lines to the vectors.S file (via e.g. `git status` in the `lib/chibios` dir)
+4. Verify changes have been made on 2 and only 2 lines to the vectors.S file (via e.g. `git status` in the `lib/chibios` dir)
 
-4. Run `make womier/k66:default`
+5. Run `make womier/k66:default`
 
-5. If everything goes fine, there should be a folder called ".build" with a .bin file (and some other things)
+6. If everything goes fine, there should be a folder called ".build" with a .bin file (and some other things)
 
 ## Flashing firmware
 
