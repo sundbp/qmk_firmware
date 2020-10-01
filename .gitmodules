@@ -4,8 +4,8 @@
 	branch = master
 [submodule "lib/chibios-contrib"]
 	path = lib/chibios-contrib
-	url = https://github.com/qmk/ChibiOS-Contrib
-	branch = master
+	url = https://github.com/smp4488/ChibiOS-Contrib.git
+	branch = womier-k66-rgb-support
 [submodule "lib/ugfx"]
 	path = lib/ugfx
 	url = https://github.com/qmk/uGFX
