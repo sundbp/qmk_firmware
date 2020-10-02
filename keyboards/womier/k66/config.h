@@ -81,6 +81,7 @@
 #define LED_DRIVER_LED_COUNT       63  // * 3(rgb)
 
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_NONE
+#define RGB_DISABLE_WHEN_SUSPENDED TRUE
 
 // #define SW_I2C_USE_I2C1            1
 
