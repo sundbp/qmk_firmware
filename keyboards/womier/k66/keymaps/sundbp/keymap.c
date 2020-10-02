@@ -58,20 +58,42 @@ void rgb_matrix_indicators_user(void) {
     switch (biton32(layer_state)) {
         // first deal with non-default layers
     case _RGB:
-        rgb_matrix_set_color_all(0, 50, 20);
+        rgb_matrix_set_color_all(225, 225, 100);
+        //for (int i = 0; i < 10; i++) {
+        //    rgb_matrix_set_color(i, 0, 100, 40);
+        //}
+        //rgb_matrix_set_color(12, 0, 100, 40);
+        //rgb_matrix_set_color(13, 0, 100, 40);
+        //rgb_matrix_set_color(27, 0, 100, 40);
+        //rgb_matrix_set_color(55, 0, 100, 40);
+        //rgb_matrix_set_color(63, 0, 100, 40);
+        //rgb_matrix_set_color(64, 0, 100, 40);
+        //rgb_matrix_set_color(65, 0, 100, 40);
         break;
 
     case _FUNS:
-        for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
-            rgb_matrix_set_color(i, 0x6B, 0x00, 0x80);
-        }
+        rgb_matrix_set_color_all(75, 155, 205);
+        //for (int i = 0; i < 14; i++) {
+        //    rgb_matrix_set_color(i, 150, 0, 0);
+        //}
+        //rgb_matrix_set_color(15, 25, 150, 40);
+        //rgb_matrix_set_color(23, 150, 20, 100);
+        //rgb_matrix_set_color(23, 150, 20, 100);
+        //rgb_matrix_set_color(31, 150, 20, 100);
+        //rgb_matrix_set_color(36, 150, 20, 100);
+        //rgb_matrix_set_color(41, 150, 20, 100);
+        //rgb_matrix_set_color(48, 150, 20, 100);
+        //rgb_matrix_set_color(55, 150, 20, 100);
+        //rgb_matrix_set_color(63, 150, 20, 100);
+        //rgb_matrix_set_color(64, 150, 20, 100);
+        //rgb_matrix_set_color(65, 150, 20, 100);
         break;
 
     default:
         // when no function layer is active deal with default layers
         switch(biton32(default_layer_state)) {
         case _NORMAN:
-            rgb_matrix_set_color_all(50, 50, 25);
+            rgb_matrix_set_color_all(100, 200, 100);
             break;
 
         case _QWERTY:
